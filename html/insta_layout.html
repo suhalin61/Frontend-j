@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        .container {
+
+            height: 100vh;
+            border: 2px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height:700px;
+            min-width: 1200px;
+            position: fixed;
+            left: 0px;
+            right: 0px;
+
+        }
+
+        .box {
+
+            height: 70%;
+            width: 30%;
+            border: 2px solid black;
+        }
+
+        #inner-box-1 {
+
+            height: 70%;
+            border: 2px dashed black;
+        }
+
+        #inner-box-2 {
+
+            height: 10%;
+            border: 2px dashed red;
+        }
+
+        #inner-box-3 {
+
+            height: 20%;
+            border: 2px dashed green;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo {
+
+            height: 20%;
+            border: 2px solid red;
+            text-align: center;
+        }
+
+        .input {
+
+            height: 50%;
+            border: 2px solid black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+
+        }
+
+        .links {
+
+            height: 30%;
+            border: 2px solid red;
+            text-align: center;
+            position: relative;
+        }
+
+        .input input {
+
+            padding: 13px;
+            margin: 4px;
+            outline: none;
+
+        }
+
+        .input input[type="submit"] {
+
+            background-color: #4bb4f8;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            font-weight: 900;
+
+        }
+
+        .u {
+
+            width: 75%;
+            margin: auto;
+        }
+
+
+        .logo img {
+
+            height: 100%;
+            width: 50%;
+        }
+
+        #or::before {
+
+            content: "";
+            border: 1px solid rgb(194, 192, 192);
+            position: absolute;
+            width: 40%;
+            left: 10px;
+            top: 10px;
+        }
+
+
+        #or::after {
+
+            content: "";
+            border: 1px solid rgb(187, 185, 185);
+            position: absolute;
+            width: 40%;
+            right: 10px;
+            top: 10px;
+        }
+
+        #inner-box-3 img{
+
+            width: 30%;
+            height: 48%;
+            margin: 0px 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+
+        <div class="box"></div>
+        <div class="box">
+            <div class="inner-box" id="inner-box-1">
+                <div class="logo u">
+                    <img src="https://logos-world.net/wp-content/uploads/2020/05/Instagram-Logo-2016-present.png"
+                        alt="">
+                </div>
+                <div class="input u">
+                    <input type="text" placeholder="username or email address">
+                    <input type="text" placeholder="Password">
+                    <input type="submit" value="Log in">
+                </div>
+                <div class="links u">
+                    <span id="or">OR</span>
+                </div>
+            </div>
+            <div class="inner-box" id="inner-box-2"></div>
+            <div class="inner-box" id="inner-box-3">
+                <img src="https://static.cdninstagram.com/rsrc.php/v3/yt/r/Yfc020c87j0.png" alt="">
+                <img src="https://static.cdninstagram.com/rsrc.php/v3/yz/r/c5Rp7Ym-Klz.png" alt="">
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
