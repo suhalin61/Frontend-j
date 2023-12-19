@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        .container{
+
+            height: 100vh;
+            background-color: black;
+            display: grid;
+            justify-items: center;
+             place-items: center; 
+             justify-items: center;
+            align-content: center; 
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-columns: repeat(4,auto);
+            grid-template-rows: 1fr 5fr 1fr;
+        }
+
+
+        .item{
+
+            height: 200px;
+            width: 200px;
+            background-color: yellow;
+            margin: 5px;
+        }
+
+      #item-2{
+            display: grid;
+            grid-template-columns: 1fr 4fr;
+            gap: 5px;
+        }
+        .inner-item{
+
+            height: 100%;
+            background-color: green;
+          
+        }
+
+        .box{
+
+            height: 200px;
+            background-color: black;
+            margin: 5px;
+        }
+
+        #inner-item-2{
+
+            display: grid;
+            grid-template-columns: repeat(3,auto);
+        }
+
+        .box:nth-child(1){
+            background-color: red;
+            grid-column-start: 1;
+            grid-column-end: 4;
+         
+        }
+
+        /* .box:nth-child(2){ */
+            /* background-color: yellow; */
+            /* grid-row-start: 2; */
+            /* grid-row-end:4; */
+            /* height: 97%; */
+    }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+            <div class="item"></div>
+            <div class="item" id="item-2">
+                <div class="inner-item">
+                </div>
+                <div class="inner-item" id="inner-item-2">
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                </div>
+            </div>
+           
+</body>
+</html>
