@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document object model</title>
+</head>
+<body>
+    <!-- <button id="btn">print</button>
+    <button id="red">Red</button>
+    <button id="green">Green</button>
+    <button id="italic">Italic</button>
+    <h1 id="h1"></h1> -->
+    <h1 id="h1">this is heading</h1>
+    <button id="plus">+</button>
+    <button id="minus">-</button>
+
+
+    <script>
+// document.getElementById("btn").onclick = function (){
+//     document.getElementById("h1").innerText = "Hello User";
+// };
+// document.getElementById("red").onclick = function (){
+//     document.getElementById("h1").style.color = "red";
+// };
+// document.getElementById("green").onclick = function (){
+//     document.getElementById("h1").style.color = "green";
+// };
+// document.getElementById("italic").onclick = function (){
+//     document.getElementById("h1").style.fontStyle = "italic";
+// };
+// document.getElementById("plus").onclick = function (){
+//     document.getElementById("h1").style.fontSize= "60px";
+// };
+// document.getElementById("minus").onclick = function (){
+//     document.getElementById("h1").style.color = "small";
+// };
+
+let counter = 16;
+document.getElementById("plus").onclick = function () {
+counter++;
+console.log(counter);
+document.getElementById("h1").style.fontSize = counter + "px";
+};
+document.getElementById("minus").onclick = function () {
+counter--;
+console.log(counter);
+document.getElementById("h1").style.fontSize = counter + "px";
+};
+
+    </script>
+</body>
+</html>

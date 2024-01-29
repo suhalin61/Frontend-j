@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script</title>
+</head>
+<body id="b">
+    <h1 id="h">this is my javascript program</h1>
+    <button id="upper">uppercase</button> 
+    <button id="lower">lowecase</button>
+    <button id="red">Red</button>
+    <button id="yellow">yellow</button>
+    <button id="date">Date</button>
+    <script>
+        // console.log("Hello World !!");
+        // alert("this is first javascript program")
+        // document.write("hello world")
+        document.getElementById ("upper").onclick = function() {
+            document.getElementById ("h").style.textTransform = "uppercase";
+        };
+        document.getElementById ("lower").onclick = function() {
+            document.getElementById ("h").style.textTransform = "lowercase";
+        };
+        document.getElementById ("red").onclick = function() {
+            document.getElementById ("h").style.color = "red";
+            document.getElementById ("h4").style.backgroundColor = "black"
+        };
+    </script>
+</body>
+</html>

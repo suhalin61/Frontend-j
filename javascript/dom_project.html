@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .colors {
+        display: flex;
+        margin-top: 25px;
+    }
+
+    .color1 {
+        height: 25px;
+        width: 25px;
+
+        border-radius: 25px;
+        display: flex;
+        padding: 4px;
+        margin-right: 5px;
+        background-color: red;
+        cursor: pointer;
+
+    }
+
+    .color2 {
+        height: 25px;
+        width: 25px;
+
+        border-radius: 25px;
+        padding: 4px;
+        margin-right: 5px;
+        background-color: yellow;
+        cursor: pointer;
+
+    }
+
+    .color3 {
+        height: 25px;
+        width: 25px;
+        border-radius: 25px;
+        padding: 4px;
+        margin-right: 5px;
+        background-color: green;
+        cursor: pointer;
+
+    }
+
+    .color4 {
+        height: 25px;
+        width: 25px;
+
+        border-radius: 25px;
+        padding: 4px;
+        margin-right: 5px;
+        background-color: blue;
+        cursor: pointer;
+
+    }
+
+    .color5 {
+        height: 25px;
+        width: 25px;
+
+        border-radius: 25px;
+        padding: 4px;
+        margin-right: 5px;
+        background-color: black;
+        cursor: pointer;
+    }
+
+    .btn1 {
+        background-color: rgb(119, 207, 119);
+        color: white;
+        align-items: center;
+        border-radius: 24px;
+        border: none;
+        
+        padding: 10px 15px;
+        margin: 15 px;
+    }
+
+    body{
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50vh;
+    }
+
+    .container {
+        
+       border: 2px solid black;
+       width: 50%;
+       padding: 20px;
+       background-color: white;
+        border-radius: 25px;
+
+    }
+
+    .colors{
+
+        margin: 10px 0px;
+    }
+</style>
+
+<body id="cont">
+    <div class="container">
+        <h1>Select Your Domain</h1>
+        <select name="" id="select">
+            <option value="">--make your choice --</option>
+            <option value="react">React</option>
+            <option value="django">Django</option>
+            <option value="angular">Angular</option>
+            <option value="aws">AWS</option>
+        </select>
+        <p id="h4"></p>
+
+
+        <div class="colors">
+            <div id="red" class="color1"></div>
+            <div id="yellow" class="color2"></div>
+            <div id="green" class="color3"></div>
+            <div id="blue" class="color4"></div>
+            <div id="black" class="color5"></div>
+        </div>
+
+        <button class="btn1" id="upper">Uppercase</button>
+        <button class="btn1" id="lower">Lowecase</button>
+        <button class="btn1" id="plus">+</button>
+        <button class="btn1" id="minus">-</button>
+    </div>
+    <script>
+        document.getElementById("select").onclick = function () {
+            let a = document.getElementById("select").value;
+
+            if (a == "react") {
+                document.getElementById("h4").innerText = "React makes it painless to create interactive UIs. Design simple views for each state in your application, and React will efficiently update and render just the right components when your data changes.Declarative views make your code more predictable and easier to debug."
+            }
+            else if (a == "django") {
+                document.getElementById("h4").innerText = "Django (/dʒæŋ\oʊ/ JANG-goh; sometimes stylized as django) is a free and open-source, Python-based web framework that runs on a web server. It follows the modeltemplateviews (MTV) architectural pattern. It is maintained by the Django Software Foundation (DSF), an independent"
+            }
+            else if (a == "angular") {
+                document.getElementById("h4").innerText = "Angular (also referred to as Angular2+) is a TypeScript-based, free and open-source single-page web application framework led by the Angular Team at Google and by a community of individuals and corporations. Angular is a complete rewrite from the same team that built AngularJS."
+            }
+            else if (a == "aws") {
+                document.getElementById("h4").innerText = "AWS services are delivered to customers via a network of AWS server farms located throughout the world. Fees are based on a combination of usage (known as a Pay-as-you-go model), hardware, operating system, software, or networking features chosen by the subscriber require availability, redundancy, security, and service options. Subscribers can pay for a single virtual AWS computer, a dedicated physical computer, or clusters of either.[7] Amazon provides select portions of security for subscribers (e.g. physical security of the data centers) while other aspects of security are the responsibility of the subscriber (e.g. account management, vulnerability scanning, patching). AWS operates from many global geographical regions including seven in North America"
+            }
+            else{
+
+                document.getElementById("h4").innerText = ""
+            }
+        };
+        document.getElementById("upper").onclick = function () {
+            document.getElementById("h4").style.textTransform = "uppercase";
+        };
+        document.getElementById("lower").onclick = function () {
+            document.getElementById("h4").style.textTransform = "lowercase";
+        };
+        let counter = 16;
+        document.getElementById("plus").onclick = function () {
+            counter++;
+            console.log(counter);
+            document.getElementById("h4").style.fontSize = counter + "px";
+        };
+        document.getElementById("minus").onclick = function () {
+            counter--;
+            console.log(counter);
+            document.getElementById("h4").style.fontSize = counter + "px";
+        };
+      
+        document.getElementById("red").onclick = function () {
+            document.getElementById("cont").style.backgroundColor = "red";
+        };
+        document.getElementById("yellow").onclick = function () {
+            document.getElementById("cont").style.backgroundColor = "yellow";
+        };
+        document.getElementById("green").onclick = function () {
+            document.getElementById("cont").style.backgroundColor = "green";
+        };
+        document.getElementById("blue").onclick = function () {
+            document.getElementById("cont").style.backgroundColor = "blue";
+        };
+        document.getElementById("black").onclick = function () {
+            document.getElementById("cont").style.backgroundColor = "black";
+        };
+
+    </script>
+</body>
+
+</html>
