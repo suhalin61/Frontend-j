@@ -103,6 +103,8 @@
     .colors{
 
         margin: 10px 0px;
+      
+      
     }
 </style>
 
@@ -131,6 +133,13 @@
         <button class="btn1" id="lower">Lowecase</button>
         <button class="btn1" id="plus">+</button>
         <button class="btn1" id="minus">-</button>
+        <select class="btn1" id="fon">
+            <option value="none">None</option>
+            <option value="sans">sans-serif</option>
+            <option value="serif"> serif</option>
+            <option value="cursive">cursive</option>
+            <option value="mono">monospace</option>
+        </select>
     </div>
     <script>
         document.getElementById("select").onclick = function () {
@@ -186,7 +195,26 @@
         document.getElementById("black").onclick = function () {
             document.getElementById("cont").style.backgroundColor = "black";
         };
-
+            document.getElementById("fon").onclick = function (){
+           
+                let p = document.getElementById("fon").value;
+                if (p == "sans") {
+                    document.getElementById("h4").style.fontFamily = "sans-serif";
+                }
+              else  if (p == "serif") {
+                    document.getElementById("h4").style.fontFamily = "serif";
+                }
+    
+               else  if (p == "cursive") {
+                    document.getElementById("h4").style.fontFamily = "cursive";
+                } 
+                else if (p == "mono") {
+                    document.getElementById("h4").style.fontFamily = "monospace";
+                }
+               else if (p == "none") {
+                    document.getElementById("h4").style.fontFamily = "";
+                }
+            };
     </script>
 </body>
 

@@ -174,7 +174,7 @@ nav button {
     background-color: #303030;
     margin-bottom: 2px;
     cursor: pointer;
-    position: relative; */
+    position: relative; 
  }
 
 label::after {
@@ -186,26 +186,10 @@ label::after {
 } 
 
  input[type="radio"] {
-    display: none; */
+    display: none; 
  } 
 
-/* .accordion .content {
-    background-color: #303030;
-    text-align: left;
-    padding: 0 20px;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s, padding 0.5s;
-} */
 
-/* .accordion input[type="radio"]:checked + label + .content {
-    max-height: 600px;
-    padding: 30px 20px;
-}
-
-.accordion input[type="radio"]:checked + label::after {
-    transform: rotate(135deg); */
-/* } */
 
 .faq small {
     font-size: 13px;

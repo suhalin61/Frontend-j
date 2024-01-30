@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .header {
+
+            height: 10vh;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            min-height: 60px;
+            min-width: 800px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            z-index: 1;
+
+        }
+        #bar{
+
+            visibility: hidden;
+           
+        }
+
+        @media (min-width:200px) and (max-width:1050px) {
+
+            #bar{
+                
+             
+                visibility: visible;
+                
+            }
+
+            .menu{
+                display: none;
+            }
+         
+       
+
+        }
+
+
+
+
+
+
+        .logo {
+
+            height: 50%;
+            width: 15%;
+
+
+        }
+
+        .menu {
+
+            height: 70%;
+            width: 40%;
+
+
+        }
+
+        .logo img {
+
+            height: 100%;
+            width: 100%;
+        }
+
+        .menu ul {
+
+            display: flex;
+            height: 100%;
+            justify-content: space-evenly;
+
+
+
+        }
+
+        .menu ul li {
+
+            list-style: none;
+            font-family: 'Poppins', sans-serif;
+            letter-spacing: 1px;
+            font-weight: 550;
+            font-size: 0.9rem;
+
+        }
+
+        .menu ul li:hover {
+
+            color: #fb6355;
+            cursor: pointer;
+        }
+
+
+        .carousel {
+
+            height: 70vh;
+            min-width: 800px;
+            min-height: 500px;
+            display: flex;
+
+        }
+
+        .carousel .left {
+
+            height: 100%;
+            width: 35%;
+            border: 2px solid red;
+            background-image: url('https://templatemo.com/templates/templatemo_558_klassy_cafe/assets/images/top-left-bg.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+
+        }
+
+        .carousel .right {
+
+            height: 100%;
+            width: 65%;
+        }
+
+        .carousel .left .content {
+
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .carousel .left .content h4 {
+
+            font-family: 'Dancing Script', cursive;
+            color: #fff;
+            font-size: 54px;
+            font-weight: 700;
+        }
+
+        .carousel .left .content h6 {
+            font-size: 15px;
+            text-transform: uppercase;
+            font-weight: 600;
+            color: #fff;
+            letter-spacing: 3px;
+            margin-top: 5px;
+        }
+
+        .carousel .left .content button {
+
+            border: none;
+            padding: 0.5rem;
+            background-color: #fff;
+            color: #fb6355;
+            font-size: 10px;
+            font-weight: 600;
+            width: 35%;
+            margin: 10px;
+        }
+
+        .right img {
+
+            height: 100%;
+            width: 100%;
+        }
+
+        /* Cake box start */
+
+
+        .cake-box {
+
+            height: 300px;
+            width: 250px;
+            overflow: hidden;
+            position: relative;
+            border-radius: 5px;
+            border: 1px solid rgba(0, 0, 0, .125);
+
+        }
+
+        .cake-box img {
+
+            height: 100%;
+            width: 100%;
+        }
+
+        .cake-box .box-2 {
+
+            height: 300px;
+            width: 300px;
+            background-color: #fb6355;
+            position: relative;
+            bottom: 4rem;
+            transition: all 0.5s ease-in;
+            cursor: pointer;
+
+
+        }
+
+        .cake-box .box-2:hover {
+
+            transform: translateY(-100px);
+        }
+
+        .cake-box .box-2 .info {
+
+            width: 80%;
+            margin: auto;
+            color: white;
+
+        }
+
+        .cake-box .box-2 .info h4 {
+
+            position: relative;
+            top: 1rem;
+        }
+
+        .cake-box .box-2 .info p {
+
+            position: relative;
+            top: 1rem;
+            width: 80%;
+            text-align: justify;
+            line-height: 20px;
+            word-spacing: 2px;
+            font-size: 14px;
+
+        }
+
+        .cake-box .box1 {
+
+            height: 50px;
+            width: 50px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: #fb6355;
+        }
+
+        .cake-box .box1 {
+
+            color: #fff;
+            font-weight: bold;
+            text-align: center;
+            padding-top: 0.8rem;
+            box-sizing: border-box;
+
+        }
+
+        .cake-container {
+
+            /* border: 1px solid black; */
+            height: 70vh;
+            width: 65%;
+            min-height: 500px;
+            min-width: 800px;
+            max-width: 900px;
+            font-family: 'Poppins', sans-serif;
+            margin: auto;
+            margin-top: 1rem;
+
+        }
+
+
+        .cake-container-box {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            /* border: 1px solid rgba(0, 0, 0, .125); */
+
+        }
+
+        .cake-heading {
+
+            width: 28%;
+            margin: auto;
+            text-align: center;
+        }
+
+        .cake-heading p {
+
+            position: relative;
+            top: 1rem;
+            font-size: 15px;
+            color: #fb5849;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-align: center;
+
+        }
+
+        .cake-heading h4 {
+
+            font-size: 20px;
+            font-weight: 950;
+            font-family: sans-serif;
+        }
+
+        .cake-heading p::before {
+
+            content: "";
+            position: absolute;
+            top: 8px;
+            left: 35px;
+            height: 1px;
+            background-color: #fb5849;
+            width: 30px;
+
+        }
+
+        /* Cake box css end */
+
+        /* chef box css start*/
+
+        .chef-container-box .box {
+
+            position: relative;
+            height: 300px;
+            width: 270px;
+            cursor: pointer;
+            border: 1px solid #afafaf;
+        }
+
+        .chef-container-box .box .social {
+            position: absolute;
+            top: 30%;
+            left: 13%;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.5s;
+
+        }
+
+        .chef-container-box .box .image img:hover {
+
+            opacity: 0.3;
+        }
+
+        .chef-container-box .box:hover {
+
+            border: 1px solid red;
+        }
+
+        .chef-container-box .box:hover .content h4 {
+
+            color: red;
+        }
+
+        .chef-container-box .box:hover ul {
+
+            opacity: 1;
+            visibility: visible;
+
+
+        }
+
+        .chef-container-box .box:hover .image img {
+
+            opacity: 0.4;
+        }
+
+        .chef-container-box .box .social li {
+
+            list-style: none;
+            display: inline-block;
+            border-radius: 2rem;
+            background-color: white;
+            padding: 8px;
+            color: black;
+            margin: 0.2rem;
+            box-sizing: border-box;
+
+
+        }
+
+
+
+        .chef-container-box .box .image img {
+
+            height: 100%;
+            width: 100%;
+        }
+
+        .chef-container-box .box .image {
+
+            height: 80%;
+            width: 97%;
+            background-color: black;
+            margin: auto;
+            margin-top: 3px;
+        }
+
+        .chef-container-box .box .content {
+
+            height: 19%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .chef-container-box .box .content h4 {
+
+            position: relative;
+            bottom: 1rem;
+        }
+
+        .chef-container-box .box .content p {
+
+            position: relative;
+            bottom: 3rem;
+
+        }
+
+        .chef-container {
+
+            /* border: 1px solid black; */
+            height: 70vh;
+            width: 70%;
+            margin: auto;
+            font-family: 'Poppins', sans-serif;
+            margin-top: 1rem;
+            min-height: 500px;
+            min-width: 800px;
+            max-width: 900px;
+
+        }
+
+        .chef-container-box {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            /* border: 1px solid rgba(0, 0, 0, .125); */
+
+        }
+
+
+
+        .chef-heading {
+
+            width: 28%;
+            margin: auto;
+            text-align: center;
+        }
+
+        .chef-heading p {
+
+            position: relative;
+            top: 1rem;
+            font-size: 15px;
+            color: #fb5849;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-align: center;
+
+        }
+
+        .chef-heading h4 {
+
+            font-size: 20px;
+            font-weight: 950;
+            font-family: sans-serif;
+        }
+
+        .chef-heading p::before {
+
+            content: "";
+            position: absolute;
+            top: 8px;
+            left: 32px;
+            height: 1px;
+            background-color: #fb5849;
+            width: 30px;
+
+        }
+
+        /* chef box css end */
+
+        a{
+            text-decoration: none;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <div class="header">
+
+        <div class="logo">
+            <img src="https://templatemo.com/templates/templatemo_558_klassy_cafe/assets/images/klassy-logo.png" alt="">
+        </div>
+        <div class="menu">
+            <ul class="list">
+                <li><a href="#">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#chef">Chef</a></li>
+                <li><a href="">Features</a></li>
+                <li><a href="">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <div id="bar"><i class="fa-solid fa-bars"></i></div>
+    </div>
+
+
+    <div class="carousel">
+
+        <div class="left">
+            <div class="content">
+                <h4>Klassy Cafe</h4>
+                <h6>The Best Experience</h6>
+                <button>Make A Reservation</button>
+            </div>
+        </div>
+        <div class="right">
+            <img src="https://templatemo.com/templates/templatemo_558_klassy_cafe/assets/images/slide-03.jpg" alt="">
+        </div>
+
+    </div>
+
+    <!-- cake-box-start -->
+
+    <div class="cake-container" id= "menu">
+        <div class="cake-heading">
+            <p>OUR MENU</p>
+            <h4>Our selection of cakes with quality taste</h4>
+        </div>
+        <div class="cake-container-box">
+            <div class="cake-box">
+                <div class="box1">$18</div>
+                <img src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?auto=format&fit=crop&q=80&w=1000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aHVtYW58ZW58MHx8MHx8fDA%3D"
+                    alt="">
+                <div class="box-2">
+                    <div class="info">
+                        <h4>Klassy Cup Cake</h4>
+                        <p>Lorem, ipsum dolor sit amet consectetur,adipisicin,Velit voluptatibus cum</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cake-box">
+                <div class="box1">$18</div>
+                <img src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?auto=format&fit=crop&q=80&w=1000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aHVtYW58ZW58MHx8MHx8fDA%3D"
+                    alt="">
+                <div class="box-2">
+                    <div class="info">
+                        <h4>Klassy Cup Cake</h4>
+                        <p>Lorem, ipsum dolor sit amet consectetur,adipisicin,Velit voluptatibus cum</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cake-box">
+                <div class="box1">$18</div>
+                <img src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?auto=format&fit=crop&q=80&w=1000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aHVtYW58ZW58MHx8MHx8fDA%3D"
+                    alt="">
+                <div class="box-2">
+                    <div class="info">
+                        <h4>Klassy Cup Cake</h4>
+                        <p>Lorem, ipsum dolor sit amet consectetur,adipisicin,Velit voluptatibus cum</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- cake-box-end -->
+
+    <!-- chef-box start -->
+
+    <div class="chef-container" id="chef">
+
+        <div class="chef-heading">
+            <p>OUR CHEFS</p>
+            <h4>We offer the best ingredients for you</h4>
+        </div>
+
+        <div class="chef-container-box">
+            <div class="box">
+                <div class="image">
+                    <img src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?auto=format&fit=crop&q=80&w=1000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aHVtYW58ZW58MHx8MHx8fDA%3D"
+                        alt="">
+                </div>
+                <ul class="social">
+                    <li><i class="fa-solid fa-user"></i></li>
+                    <li><i class="fa-brands fa-instagram"></i></li>
+                    <li><i class="fa-solid fa-heart"></i></li>
+                </ul>
+                <div class="content">
+                    <h4>Randy Walker</h4>
+                    <p>Pastry Chef</p>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?auto=format&fit=crop&q=80&w=1000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aHVtYW58ZW58MHx8MHx8fDA%3D"
+                        alt="">
+                </div>
+                <ul class="social">
+                    <li><i class="fa-solid fa-user"></i></li>
+                    <li><i class="fa-brands fa-instagram"></i></li>
+                    <li><i class="fa-solid fa-heart"></i></li>
+                </ul>
+                <div class="content">
+                    <h4>Randy Walker</h4>
+                    <p>Pastry Chef</p>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?auto=format&fit=crop&q=80&w=1000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aHVtYW58ZW58MHx8MHx8fDA%3D"
+                        alt="">
+                </div>
+                <ul class="social">
+                    <li><i class="fa-solid fa-user"></i></li>
+                    <li><i class="fa-brands fa-instagram"></i></li>
+                    <li><i class="fa-solid fa-heart"></i></li>
+                </ul>
+                <div class="content">
+                    <h4>Randy Walker</h4>
+                    <p>Pastry Chef</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- chef-box-end -->
+
+</body>
+
+</html>

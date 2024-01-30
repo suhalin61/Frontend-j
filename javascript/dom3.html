@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="btn" id="1">submit</buttun>
+    <button class="btn" id="2">submit</buttun>
+    <button class="btn" id="3">submit</buttun>
+    <button class="btn" id="4">submit</buttun>
+    <button class="btn" id="5">submit</buttun>
+    <button class="btn" id="6">submit</buttun>
+
+
+
+    <script>
+        // document.querySelector("button").onclick = function () {
+        //   let a = document.querySelectorAll(".btn");
+        //   for(let i = 0 ; i < 6; i++){
+        //   console.log(a[i])
+        // }
+        // };
+        let a = document.querySelectorAll(".btn");
+        console.log(a)
+        for(let i = 0;i < a.length; i++){
+            a[i].onclick = function(e){
+                console.log(e.target.id);
+                // console.log("e");
+            }
+        }
+        // for(let i of a){
+        //     console.log(i)
+        // }
+        // for(let i in a ){
+        //     console.log(a[i])
+        // }
+        // a.forEach(function(i){
+        //     console.log(i)
+
+        // })
+    </script>
+</body>
+</html>
