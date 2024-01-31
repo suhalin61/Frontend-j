@@ -6,12 +6,16 @@
     <title>Document</title>
 </head>
 <body>
-    <button class="btn" id="1">submit</buttun>
+    <!-- <button class="btn" id="1">submit</buttun>
     <button class="btn" id="2">submit</buttun>
     <button class="btn" id="3">submit</buttun>
     <button class="btn" id="4">submit</buttun>
     <button class="btn" id="5">submit</buttun>
-    <button class="btn" id="6">submit</buttun>
+    <button class="btn" id="6">submit</buttun> -->
+
+        <button id="btn">submit</button>
+         
+    
 
 
 
@@ -22,14 +26,14 @@
         //   console.log(a[i])
         // }
         // };
-        let a = document.querySelectorAll(".btn");
-        console.log(a)
-        for(let i = 0;i < a.length; i++){
-            a[i].onclick = function(e){
-                console.log(e.target.id);
+        // let a = document.querySelectorAll(".btn");
+        // console.log(a)
+        // for(let i = 0;i < a.length; i++){
+        //     a[i].onclick = function(e){
+        //         console.log(e.target.id);
                 // console.log("e");
-            }
-        }
+            // }
+        // }
         // for(let i of a){
         //     console.log(i)
         // }
@@ -40,6 +44,16 @@
         //     console.log(i)
 
         // })
+
+        let a = document.getElementById("btn")
+        a.addEventListener("click",function () {
+            console.log("Hello")
+        });
+        // for queryselector
+    //   let a =  document.querySelector("button")
+    //     a.addEventListener("click",function () {
+    //         console.log("Hello")
+    //     });
     </script>
 </body>
 </html>
