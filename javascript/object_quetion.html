@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        const complexData = [
+  {
+    id: 1,
+    name: 'John Doe',
+    age: 30,
+    address: {
+      street: '123 Main St',
+      city: 'Anytown',
+      country: 'USA'
+    },
+    orders: [
+      { orderId: 'A123', amount: 50.75, status: 'completed' },
+      { orderId: 'B456', amount: 30.25, status: 'pending' }
+    ]
+  },
+  {
+    id: 2,
+    name: 'Jane Smith',
+    age: 25,
+    address: {
+      street: '456 Oak St',
+      city: 'Othercity',
+      country: 'USA'
+    },
+    orders: [
+      { orderId: 'C789', amount: 100.50, status: 'completed' },
+      { orderId: 'D012', amount: 75.20, status: 'completed' }
+    ]
+  },
+
+];
+// 1. Filter users who are aged 25 or younger
+
+//   let a = complexData.filter((i)=>i.age<=25)
+//             console.log(a)
+
+
+// 2. Map the array to get an array of user names
+
+//  let name = complexData.map((i)=>i.name)
+//     console.log(name)
+
+
+// 3. Filter orders with an amount greater than 50.
+
+      //  let amount = complexData.flatemap(i)=>{
+      //  return i.orders;
+      // i.orders.filter
+      //  }
+    //   let amount = complexData.flatMap((item)=>item.orders.filter((data)=>data.amount > 50))
+    // console.log(amount)
+            // 4. Map the array to get an array of order IDs.
+
+    //          let name = complexData.map((i)=>i.id)
+    // console.log(name)
+
+
+//  let name = complexData.map((i)=>i.orderId,map((id)=>id.name))
+
+   
+//        console.log(name)
+// let ans = complexData.flatMap((item)=>{
+//   return item.orders.map((data)=>{
+//     return data.orderId
+//   })
+// })
+// console.log(ans)
+
+// 5.Filter users who have at least one order with a status of 'pending'.
+
+
+
+    </script>
+</body>
+</html>

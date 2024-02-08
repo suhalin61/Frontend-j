@@ -1,31 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
+<style>
+    .btn1 {
+        padding: 1px 4px;
+        /* display: inline-block; */
+    }
+
+    .btn2 {
+        padding: 1px 4px;
+        /* display: inline-block; */
+        position: relative;
+        right: 31px;
+    }
+</style>
+
 <body>
-    <input type="password" placeholder="" id="pass">
-   <button> <i id="btn" class="fa-solid fa-eye-slash" ></i> </button>
-   <button><i id="btn" class="fa-solid fa-eye" ></i></button>
-  
+    <div class="container">
+        <input type="password" placeholder="" id="pass">
+        <button class="btn1" id="btn1"><i class="fa-solid fa-eye"></i></button>
+        <button class="btn2" id="btn2"><i class="fa-regular fa-eye-slash"></i></button>
+    </div>
 
 
 
     <script>
+
+      
         
-document.getElementById("btn").addEventListener("click",function(){
-    if(document.getElementById("pass").type=="password"){
-        document.getElementById("pass").type="text";
-    }
-    else{
-        document.getElementById("pass").type="password";
-    }
+        document.getElementById("btn2").onclick = function () {
+            let a = document.getElementById("pass");
+            document.getElementById("btn2").style.display = "none";
+            document.getElementById("btn1").style.display = "inline-block";
+            if (a.type == "password") {
+                a.type = "text";
+            }
+            else {
+                a.type = "password";
+            }
+        }
+        document.getElementById("btn1").onclick = function () {
+            let a = document.getElementById("pass");
+            document.getElementById("btn1").style.display = "none";
+            document.getElementById("btn2").style.display = "inline-block";
+            document.getElementById("btn2").style.right = "0px";
+            if (a.type == "text") {
+                a.type = "password";
+            }
+            else {
+                a.type = "text";
+            }
+        }
+        
     
-})
-    
+
     </script>
 </body>
+
 </html>
