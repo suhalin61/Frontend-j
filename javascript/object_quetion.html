@@ -77,9 +77,29 @@
 // console.log(ans)
 
 // 5.Filter users who have at least one order with a status of 'pending'.
+// let ans = complexData.flatMap(function(item){
+//   return item.orders.filter(function(data){
+//         return data.status=="completed"
+     
+//     })
+//   })
+
+// console.log(ans);
+// let ans = complexData.flatMap((item)=>item.orders.filter((data)=>data.status=="pending"));
+// console.log(ans)
 
 
+// 6 .Filter orders with an amount between 30 and 70.
+// let a = complexData.flatMap((item)=>item.orders.filter((data)=>data.amount>=30 && data.amount<=70));
+// console.log(a)
 
+// 7. Map the array to get an array of objects containing user names and their total order amounts
+let a = complexData.map(function(item){
+  return item.name
+})
+console.log(a)
+                   
     </script>
 </body>
 </html>
+

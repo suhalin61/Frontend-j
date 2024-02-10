@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //     const a  = {
+
+      //       id:1,
+      //       fname:"mohit",
+      //       lname : "Sharma",
+      //       address : function(){
+      //          console.log("Jaipur")
+      //       },
+      //       course : ["mern","django","aws"],
+      //       full_name : function(){
+
+      //           console.log(this.fname,this.lname)
+      //       }
+      //   }
+      //    console.log(a.full_name())
+
+      //   let [a,b,...c] = [10,20,30,40,50,60,70,80];
+      //   console.log(a)
+      //   console.log(b)
+      //   console.log(c)
+
+      // let [a = "mohit" , b = a] = ["rohit"];
+      // console.log(a)
+      // console.log(b)
+
+      // Closure
+
+      //  function Outter(){
+
+      //      let a = "Mohit Sharma";
+
+      //      function inner(){
+      //          console.log(a)
+      //      }
+
+      //      return inner;
+      //  }
+
+      //  let ans = Outter();
+      //  ans()
+
+      //   console.log("One");
+      //   console.log("Two");
+      //   console.log("Three");
+
+      //   setTimeout(function () {
+      //     for (let i = 0; i <= 50000; i++) {
+      //       console.log(i);
+      //     }
+      //   }, 1000);
+
+      //   console.log("Four");
+      //   console.log("Five");
+      //   console.log("Six");
+
+      function Party(dishes,order) {
+        // console.log("Pizza aa rha h  ......")
+        setTimeout(() => {
+          console.log(dishes);
+          if(order){
+
+              order()
+          }
+        }, 3000);
+      }
+
+        Party("Pizza",()=>{
+             console.log("Burger aa rha h ...")
+           Party("Burger",()=>{
+               console.log("Patteis aa rhi h ....")
+               Party("Patties",()=>{
+                    console.log("cold drink aa rhi h ....")
+                    Party("cold drink")
+               })
+           })
+      })
+
+
+    //   call back ---- > call back hell ----> promises ------> promises chain ----> async await
+    
+    
+    </script>
+  </body>
+</html>
