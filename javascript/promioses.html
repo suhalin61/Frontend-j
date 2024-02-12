@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>promises</title>
+</head>
+
+<body>
+
+
+
+    <script>
+
+        // promoses
+        // 1 pending
+        // 2 resolve .then ()
+        // 3 reject.catch()
+
+// let prom = new Promise((resolve,reject)=>{
+//     if(false){
+//         resolve("promise is complete")
+//     }
+//     else{
+//         reject("promise is uncomplete")
+//     }
+// })
+
+// prom.then((result)=>{
+//     console.log(result)
+// })
+// prom.catch((error)=>{
+//     console.log(error)
+// })
+
+
+// function Party(order){
+//     console.log("loading....")
+//  return   new Promise((resolve,reject)=>{
+//         setTimeout(()=>{
+//              resolve(order);
+//         }, 3000);
+//     });
+// }
+
+// Party("pizza").then((result)=>{
+//     console.log(result);
+//     Party("burder").then((result)=>{
+//         console.log(result);
+//         Party("patties").then((result)=>{
+//             console.log(result)
+//         });
+//     });
+// });
+
+function Party(order){
+    console.log("loading....")
+ return   new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+             resolve(order);
+        }, 3000);
+    });
+}
+
+async function Output(){
+let pizza = await Party("Pizza");
+console.log(pizza)
+let patties = await Party("Patties");
+console.log(patties)
+let burger = await Party("Burger");
+console.log(burger)
+
+}
+
+Output()
+    </script>
+</body>
+
+</html>
