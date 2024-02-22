@@ -13,7 +13,7 @@
 
     <script>
 
-        // promoses
+        // promises
         // 1 pending
         // 2 resolve .then ()
         // 3 reject.catch()
@@ -54,26 +54,33 @@
 //     });
 // });
 
-function Party(order){
-    console.log("loading....")
- return   new Promise((resolve,reject)=>{
-        setTimeout(()=>{
-             resolve(order);
-        }, 3000);
-    });
+// function Party(order){
+//     console.log("loading....")
+//  return   new Promise((resolve,reject)=>{
+//         setTimeout(()=>{
+//              resolve(order);
+//         }, 3000);
+//     });
+// }
+
+// async function Output(){
+// let pizza = await Party("Pizza");
+// console.log(pizza)
+// let patties = await Party("Patties");
+// console.log(patties)
+// let burger = await Party("Burger");
+// console.log(burger)
+
+// }
+
+// Output()
+
+async function  callApi(){
+    let result = await fetch("https://dummyjson.com/products").then();
+    result = await result.json()
+    console.log(result);
 }
-
-async function Output(){
-let pizza = await Party("Pizza");
-console.log(pizza)
-let patties = await Party("Patties");
-console.log(patties)
-let burger = await Party("Burger");
-console.log(burger)
-
-}
-
-Output()
+callApi()
     </script>
 </body>
 

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>color genreate</title>
+</head>
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .box{
+        border: none;
+        padding: 40px 48px;
+        border-radius: 43px;
+        /* background-color: red; */
+        margin: 2px 3px;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="box" id="box1"></div>
+        <div class="box" id="box"></div>
+        <div class="box" id="box"></div>
+        <div class="box" id="box"></div>
+        <div class="box" id="box"></div>
+        <div class="box" id="box"></div>
+        <div class="box" id="box"></div>
+        <div class="box" id="box"></div>
+        <div class="box" id="box"></div>
+        <div class="box" id="box"></div>
+        <div class="box" id="box"></div>
+        <div class="box" id="box"></div>
+        <div class="box" id="box"></div>
+        <div class="box" id="box"></div>
+        <div class="box" id="box"></div>
+        <div class="box" id="box"></div>
+        <div class="box" id="box"></div>
+        <div class="box" id="box"></div>
+        <div class="box" id="box"></div>
+        <div class="box" id="box"></div>
+        <div class="box" id="box"></div>
+        <div class="box" id="box"></div>
+        <div class="box" id="box"></div>
+        <div class="box" id="box"></div>
+        <div class="box" id="box"></div>
+        <div class="box" id="box"></div>
+        <div class="box" id="box"></div>
+        <div class="box" id="box"></div>
+        <div class="box" id="box"></div>
+        <div class="box" id="box"></div>
+        <div class="box" id="box"></div>
+        <div class="box" id="box"></div>
+        <div class="box" id="box"></div>
+        <div class="box" id="box"></div>
+        <div class="box" id="box"></div>
+        <div class="box" id="box"></div>
+        <div class="box" id="box"></div>
+        <div class="box" id="box"></div>
+        <div class="box" id="box"></div>
+        <div class="box" id="box"></div>
+    </div>
+    <script>
+        let rgb = function(){
+           let  x = parseInt(Math.random()*256);
+           let  y = parseInt(Math.random()*256);
+           let  z = parseInt(Math.random()*256);
+           let random = (`${x},${y},${z}`);
+           return random;
+        }
+        // let sajid = a.addEventListener("mouseover",(){
+            //    console.log(sajid);
+            //  });
+            
+            let a = document.querySelectorAll(".box");
+            // for(let i of a){
+
+            //     i.onmouseover = function(){
+                     
+            //           i.style.backgroundColor = `rgb(${rgb()})`;
+            //     }
+            // }
+            a.forEach((item)=>{
+                item.addEventListener("mouseover",(event)=>{
+                    event.target.style.backgroundColor = `rgb(${rgb()})`;
+                });
+                // item.addEventListener("mouseout",(event)=>{
+                //     event.target.style.backgroundColor = "";
+                // });
+            });
+    </script>
+</body>
+</html>
