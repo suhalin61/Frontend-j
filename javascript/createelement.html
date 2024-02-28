@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            height: 50px;
+            width: 50px;
+           
+        }
+        .box{
+          
+            display: inline-block;
+            border: 2px solid black;
+            text-align: center;
+        } 
+    </style>
+</head>
+<body>
+    
+
+
+    <script>
+        // let d = document.createElement("div");
+        // let i = document.createElement("img");
+        // let p = document.createElement("p");
+        // i.src = "https://media.istockphoto.com/id/183412466/photo/eastern-bluebirds-male-and-female.jpg?s=612x612&w=0&k=20&c=6_EQHnGedwdjM9QTUF2c1ce7cC3XtlxvMPpU5HAouhc=";
+        // i.className = "rohit";
+        // d.className = "box";
+        // p.innerText = "Thid is good Image"
+        // d.appendChild(i)
+        // d.appendChild(p)
+        // console.log(d)
+
+
+        // document.body.append(d)
+
+
+        let data = fetch("https://dummyjson.com/recipes");
+      data.then((response) => {
+        response.json().then((result) => {
+          for(let i of result.recipes){
+            
+              let d = document.createElement("div");
+              let im = document.createElement("img");
+              let p = document.createElement("p");
+              let price = document.createElement("p");
+              d.setAttribute("class","box");
+              p.innerText = i.name
+              im.src = i.image
+              price.innerText = "Price :" + i.caloriesPerServing
+              d.appendChild(im)
+              d.appendChild(p)
+              d.appendChild(price)
+              document.body.append(d)
+              console.log(i)
+           
+             
+          }
+        });
+      });
+    </script>
+</body>
+</html>
