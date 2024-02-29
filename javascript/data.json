@@ -1,0 +1,23 @@
+[{
+    "id":1,
+    "Name":"Suhalin",
+    "location":"Gopalpura",
+    "city":"Jaipur"
+    
+},
+{
+
+    "id":2,
+    "Name":"Arshad",
+    "location":"Malaviye Nagar",
+    "city":"Jaipur"
+    
+},
+{
+
+    "id":3,
+    "Name":"Sajid",
+    "location":"PratapNagar",
+    "city":"Jaipur"
+    
+}]
